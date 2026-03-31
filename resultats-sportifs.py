@@ -1,7 +1,0 @@
-import csv
-
-with open("depenses.csv", "r", encoding="utf-8") as fichier:
-    lecture = csv.DictReader(fichier)
-    for ligne in lecture:
-        print(f"Date : {ligne['date']}, Catégorie : {ligne['categorie']}, Description : {ligne['description']}, Montant : {ligne['montant']}")
-
