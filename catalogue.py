@@ -36,6 +36,5 @@ with open("catalogue.txt", 'r', encoding='utf-8') as f:
 
             
         
-        moy= somme/Len
-        print (f"la moyenne est de: {moy}")
-            
+moy= somme/Len
+print(f"la moyenne est de {moy}")
