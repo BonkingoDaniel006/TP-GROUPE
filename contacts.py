@@ -15,3 +15,12 @@ def chercher_contact(nom_recherche):
                 print(f"Résultat : {nom} -> {tel}")
                 trouve = True
     if not trouve: print("Aucun résultat.")
+
+def ajouter_contact(nom, tel):
+    """Ajoute un nouveau contact à la fin du fichier"""
+    with open('contacts.txt', 'a') as f: # 'a' pour append (ajouter)
+        f.write(f"\n{nom}|{tel}")
+    print(f"Contact {nom} ajouté avec succès !")
+if __name__ == "__main__":
+    ajouter_contact("Charlie", "0600000000")
+    lire_contacts()
