@@ -1,5 +1,6 @@
 import csv
 
+
 with open("depenses.csv", "r", encoding="utf-8") as fichier:
     lecture = csv.DictReader(fichier)
     for ligne in lecture:
@@ -7,5 +8,11 @@ with open("depenses.csv", "r", encoding="utf-8") as fichier:
 
 with open("depenses.csv", "r", encoding="utf-8") as fichier:
     lecture = csv.DictReader(fichier)
-    depenses_total = sum(float(ligne["montant"]) for ligne in lecture)
-    print("Le total des dépenses est de : ", depenses_total)
+    montants = [float(ligne["montant"]) for ligne in lecture]
+    depenses_total = sum(montants)
+    depenses_max = max(montants)
+    depenses_min = min(montants)
+
+print("Le total des dépenses est de : ", depenses_total)
+print("Le maximum des dépenses est de : ", depenses_max)
+print("Le minimum des dépenses est de : ", depenses_min)
