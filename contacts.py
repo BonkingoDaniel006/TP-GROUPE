@@ -1,12 +1,10 @@
 def lire_contacts():
-    """Affiche tous les contacts formatés"""
     with open('contacts.txt', 'r') as f:
         for ligne in f:
             nom, tel = ligne.strip().split('|')
             print(f"Contact : {nom} (Tél: {tel})")
 
 def chercher_contact(nom_recherche):
-    """Recherche un contact par son nom"""
     trouve = False
     with open('contacts.txt', 'r') as f:
         for ligne in f:
@@ -17,7 +15,6 @@ def chercher_contact(nom_recherche):
     if not trouve: print("Aucun résultat.")
 
 def ajouter_contact(nom, tel):
-    """Ajoute un nouveau contact à la fin du fichier"""
     with open('contacts.txt', 'a') as f: # 'a' pour append (ajouter)
         f.write(f"\n{nom}|{tel}")
     print(f"Contact {nom} ajouté avec succès !")
