@@ -15,7 +15,7 @@ def chercher_contact(nom_recherche):
     if not trouve: print("Aucun résultat.")
 
 def ajouter_contact(nom, tel):
-    with open('contacts.txt', 'a') as f: # 'a' pour append (ajouter)
+    with open('contacts.txt', 'a') as f:
         f.write(f"\n{nom}|{tel}")
     print(f"Contact {nom} ajouté avec succès !")
 if __name__ == "__main__":
