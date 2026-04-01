@@ -1,3 +1,3 @@
 def saluer():
-    message = "Bonjour"
+    message = "Salut tout le monde"
     print(message)
